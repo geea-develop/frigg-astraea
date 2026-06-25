@@ -1,0 +1,3 @@
+[workspace]
+members = ["frigg-core", "frigg-py"]
+resolver = "2"

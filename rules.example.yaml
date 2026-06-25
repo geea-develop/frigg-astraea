@@ -1,0 +1,27 @@
+# Frigg V1 — Example Rules
+# Each rule matches actions by name pattern (glob: * = any chars)
+
+- id: block-file-delete
+  description: Prevent file deletion operations
+  pattern: "file_delete*"
+  severity: block
+
+- id: block-rm-rf
+  description: Block destructive shell commands
+  pattern: "bash:rm *"
+  severity: block
+
+- id: ask-network-calls
+  description: Require human approval for outbound network requests
+  pattern: "http_*"
+  severity: ask_human
+
+- id: warn-write-config
+  description: Warn when writing to configuration files
+  pattern: "file_write:*.config*"
+  severity: warn
+
+- id: log-read-ops
+  description: Log all read operations
+  pattern: "file_read*"
+  severity: log

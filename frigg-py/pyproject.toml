@@ -1,0 +1,13 @@
+[build-system]
+requires = ["maturin>=1.14,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "frigg"
+version = "0.1.0"
+description = "AI agent governance engine — boundaries, visibility, mitigation"
+requires-python = ">=3.10"
+
+[tool.maturin]
+python-source = "python"
+module-name = "frigg._frigg"
