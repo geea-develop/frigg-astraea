@@ -145,6 +145,23 @@ cargo test          # 18 Rust tests
 cd frigg-py && python -m pytest
 ```
 
+## TODO
+
+### Phase 1 — Core hardening
+- [ ] **Log encryption** — encrypt audit logs at rest (logs contain sensitive action data — paths, params, decisions)
+- [ ] **Audit log** — structured JSON logs, log rotation, summary/digest command
+- [ ] **Rule engine** — regex patterns, condition expressions, rule chaining
+- [ ] **Config validation** — warn on overlapping/conflicting rules, dry-run mode
+
+### Phase 2 — Ship it
+- [ ] **Tests & usability** — expand test coverage, clean API surface, clear error messages, sensible defaults
+- [ ] **Distribution** — publish to PyPI / crates.io
+
+### Phase 3 — Evolve
+- [ ] **Human-in-the-loop** — timeout defaults, remember decisions for session, trust escalation
+- [ ] **More integrations** — OpenAI function calling, CrewAI, other agent frameworks (including error-handling patterns)
+- [ ] **Astraea layer** — trust scoring, action correlation, behavioral baselines
+
 ## License
 
 MIT
